@@ -6,8 +6,7 @@ import sections from '../../services/directory.data';
 
 const Directory = () => {
     const renderSections = () => (
-        sections.map(section => (<MenuItem key={section.id} title={section.title} 
-                imageUrl={section.imageUrl} size={section.size} />)));
+        sections.map(({ id, ...otherSectionProps }) => (<MenuItem key={id} {...otherSectionProps} />)));
         
     return (
         <div className='directory-menu'>
