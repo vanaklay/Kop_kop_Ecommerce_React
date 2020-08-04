@@ -1,20 +1,23 @@
 .menu-item {
-    min-width: 30%;
+    min-width: 40%;
     height: 240px;
-    flex: 1 1 auto;
+    flex: auto auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
     margin: 0 7.5px 15px;
     overflow: hidden;
+    border-radius: 7px;
+    box-shadow: 0 1px 5px rgb(138, 137, 137);
+
+    
     
     &:hover {
       cursor: pointer;
 
       & .background-image {
         transform: scale(1.1);
-        transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        transition: transform 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
       }
       & .content {
         opacity: 0.9;
@@ -64,5 +67,11 @@
         font-weight: lighter;
         font-size: 16px;
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .menu-item {
+      width: 100%;
     }
   }

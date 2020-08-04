@@ -1,37 +1,30 @@
 const sections = [
   {
-    title: 'hats',
-    imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
-    size: 'small',
+    title: 'bags',
+    imageUrl: 'https://i.ibb.co/SQt9HF7/section-bags.jpg',
+    size: 'large',
     id: 1,
-    linkUrl: 'shop/hats'
-  },
-  {
-    title: 'jackets',
-    imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
-    size: 'small',
-    id: 2,
     linkUrl: 'shop/jackets'
   },
   {
-    title: 'sneakers',
-    imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
-    size: 'small',
-    id: 3,
-    linkUrl: 'shop/sneakers'
+    title: 'mugs',
+    imageUrl: 'https://i.ibb.co/z4jYMBk/dom-nok-mug-006.jpg',
+    size: 'large',
+    id: 2,
+    linkUrl: 'shop/mugs'
   },
   {
     title: 'womens',
-    imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+    imageUrl: 'https://i.ibb.co/HpxV0gB/section-woman-002.jpg',
     size: 'large',
-    id: 4,
+    id: 3,
     linkUrl: 'shop/womens'
   },
   {
     title: 'mens',
-    imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+    imageUrl: 'https://i.ibb.co/Km6Mzzq/section-mens.jpg',
     size: 'large',
-    id: 5,
+    id: 4,
     linkUrl: 'shop/mens'
   }
 ];
