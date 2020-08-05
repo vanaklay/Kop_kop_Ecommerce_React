@@ -3,6 +3,7 @@
 
 ## Features
 - Sign In, sign up with email and sign in with Google Account 
+- Store user account inside Cloud Firestore database
 
 ## Tools
 - React, React-Router-Dom
