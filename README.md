@@ -1,6 +1,9 @@
 # Kop Kop Shop - An E-commerce React project
 ![](kop001.png)
 
+## Features
+- Sign In, sign up with email and sign in with Google Account 
+
 ## Tools
 - React, React-Router-Dom
 - Firebase 
