@@ -1,8 +1,11 @@
 import React from 'react';
-import './SignIn.styles.scss';
+
+import { signInWithGoogle } from '../../services/firebase';
 
 import FormInput from '../form-input/FormInput';
 import CustomButton from '../custom-button/CustomButton';
+
+import './SignIn.styles.scss';
 
 // Functional Component with hooks
 // const SignIn = () => {
@@ -71,7 +74,8 @@ class SignIn extends React.Component {
                         value={this.state.password} label='password'
                         handleChange={this.handleChange} required />
 
-                    <CustomButton type='submit'>SIGN IN</CustomButton>
+                    <CustomButton type='submit'>Sign in</CustomButton>
+                    <CustomButton onClick={signInWithGoogle}>Sign in with Google</CustomButton>
                 </form>
             </div>
         )
