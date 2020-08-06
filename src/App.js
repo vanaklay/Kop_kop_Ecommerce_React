@@ -6,16 +6,26 @@ import Homepage from './pages/homepage/Homepage';
 import ShopPage from './pages/shop/ShopPage';
 import Header from './components/header/Header';
 import SignInAndSignUp from './pages/sign-in-and-sign-up/SignInAndSignUp';
-import { auth } from './services/firebase';
+import { auth, createUserProfileDocument } from './services/firebase';
 
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   useEffect(() => {
-    auth.onAuthStateChanged( user => {
-      setCurrentUser(user);
+    auth.onAuthStateChanged( async userAuth => {
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
+        userRef.onSnapshot(snapShot => {
+          setCurrentUser({ id: snapShot.id ,...snapShot.data()});
+        });
+        
+      } else {
+        setCurrentUser(null);
+      }
+      
     });
   }, []);
+
   return (
     <div>
       <Header currentUser={currentUser} />

@@ -14,6 +14,7 @@ const Header = ({ currentUser }) => {
                 <h2>KOP KOP SHOP</h2>
             </Link>
             <div className='options'>
+                { currentUser && <p>HI {currentUser.displayName.toUpperCase()}</p> }
                 <Link to='/shop' className='option'>SHOP</Link>
                 <Link to='/contact' className='option'>CONTACT</Link>
                 { 
