@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Switch ,Route } from 'react-router-dom';
+import { connect } from 'react-redux';
 import './App.css';
 
 import Homepage from './pages/homepage/Homepage';
@@ -8,9 +9,11 @@ import Header from './components/header/Header';
 import SignInAndSignUp from './pages/sign-in-and-sign-up/SignInAndSignUp';
 import { auth, createUserProfileDocument } from './services/firebase';
 
+import { setCurrentUser } from './redux/actions';
 
-function App() {
-  const [currentUser, setCurrentUser] = useState(null);
+
+function App(props) {
+  const { setCurrentUser } = props;
   useEffect(() => {
     auth.onAuthStateChanged( async userAuth => {
       if (userAuth) {
@@ -20,15 +23,15 @@ function App() {
         });
         
       } else {
-        setCurrentUser(null);
+        setCurrentUser(userAuth);
       }
       
     });
-  }, []);
+  },);
 
   return (
     <div>
-      <Header currentUser={currentUser} />
+      <Header />
       <Switch>
         <Route exact path='/' component={Homepage} />
         <Route path='/shop' component={ShopPage} />
@@ -39,45 +42,7 @@ function App() {
   );
 }
 
-/* 
-// How to make the app aware that user is logged in
-// --- Manage state with class component --- 
-class App extends React.Component {
-  // 1. Create a constructor
-  constructor() {
-    super();
-    this.state = {
-      currentUser: null
-    };
-  }
-  // 2. Use componentDidMount when the app first render to store user inside the state
-  // 3. Set up a property to store the subscription
-  unsubscribeFromAuth = null;
-  componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged( user => {
-      this.setState({ currentUser: user });
-    })
-  }
-  // 4. Close the subscription
-  componentWillUnmount() {
-    this.unsubscribeFromAuth();
-  }
-
-  render() {
-    return (
-      <div>
-        <Header currentUser={this.state.currentUser}/>
-        <Switch>
-          <Route exact path='/' component={Homepage} />
-          <Route path='/shop' component={ShopPage} />
-          <Route path='/signin' component={SignInAndSignUp} />
-        </Switch>
-      </div>
-      
-    );
-  }
-
-} 
-*/
-
-export default App;
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+});
+export default connect(null, mapDispatchToProps)(App);

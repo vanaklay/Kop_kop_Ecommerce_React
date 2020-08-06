@@ -2,11 +2,29 @@
 ![](kop001.png)
 
 ## Features
-- Sign In, sign up with email and sign in with Google Account 
-- Store user account inside Cloud Firestore database
+- Shopping Experience : 
+    - Main Section Products
+    - Featured categories
+    - Products List view
+    - Categories List view
+    - Add to Cart functionality
+    - Remove from Cart
+    - Edit Shopping Cart
+  
+- Checkout Experience :
+    - Shopping Cart
+    - Stripe Integration
+  
+- Backend :
+    - Database system with Firebase Firestore
+    - User management with Firebase Authentication
+    - Photo storage with Imgbb
+    - Payments with Stripe API
+  
 
 ## Tools
 - React, React-Router-Dom
+- Redux
 - Firebase 
 - Stripe Api
 - [imgbb](https://imgbb.com/)

@@ -4,7 +4,6 @@ import 'firebase/auth';
 
 const firebaseConfig = {
     // Key api
-    
   };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);

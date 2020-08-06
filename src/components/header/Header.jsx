@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { connect } from 'react-redux';
+import { setCurrentUser } from '../../redux/actions';
+
 import { auth } from '../../services/firebase';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
@@ -26,5 +29,10 @@ const Header = ({ currentUser }) => {
         </div>
     );
 };
-
-export default Header;
+const mapStateToProps = state => ({
+    // state === combineReducers inside reducers/index.js 
+    // We want combineReducers, then we want the user which will give us our 
+    // userReducer, then from there, we want the currentUser value
+    currentUser: state.user.currentUser
+});
+export default connect(mapStateToProps)(Header);
