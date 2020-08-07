@@ -1,7 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
+import { addItem } from '../../redux/actions';
+import CustomButton from '../custom-button/CustomButton';
 import './ItemCollection.styles.scss';
 
-const ItemCollection = ({ name, price, imageUrl }) => {
+const ItemCollection = ({ item, addItem }) => {
+    const { name, price, imageUrl } = item;
     return (
         <div className='collection-item'>
             <div 
@@ -14,8 +19,13 @@ const ItemCollection = ({ name, price, imageUrl }) => {
                 <span className='name'>{name.toUpperCase()}</span>
                 <span className='price'>{price} €</span>
             </div>
+            <CustomButton inverted onClick={() => addItem(item)}>Add to cart</CustomButton>
         </div>
     );
 };
 
-export default ItemCollection;
+const mapDispatchToProps = dispatch => ({
+    addItem: item => dispatch(addItem(item))
+});
+
+export default connect(null, mapDispatchToProps)(ItemCollection);
