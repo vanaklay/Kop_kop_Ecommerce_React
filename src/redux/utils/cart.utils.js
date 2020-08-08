@@ -17,3 +17,22 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
     // Return a new array with a copy of previous array and new item
     return [...cartItems, { ...cartItemToAdd, quantity: 1 }]
 };
+
+export const removeQuantityToItem = (cartItems, cartItemToReduce) => {
+    const existingCartItem = cartItems.find(
+        cartItem => cartItem.id === cartItemToReduce.id
+    );
+    if (existingCartItem.quantity === 1) {
+        return cartItems.filter( cartItem => cartItem.id !== cartItemToReduce.id );
+    };
+    return cartItems.map(cartItem => 
+            cartItem.id === cartItemToReduce.id ?
+                { ...cartItem, quantity: cartItem.quantity - 1 }
+                : cartItem
+            );
+};
+
+export const removeItemToCart = (cartItems, cartItemToRemove) => {
+    // return an array without the cartItemToRemove passes
+    return cartItems.filter( cartItem => cartItem.id !== cartItemToRemove.id );
+};
