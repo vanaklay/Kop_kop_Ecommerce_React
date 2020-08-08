@@ -41,15 +41,15 @@ const SignUp = () => {
     };
     return (
         <div className='sign-up'>
-            <h2 className='title'>I do not have a account</h2>
-            <span>Sign up with your email and password</span>
+            <h2 className='title'>Je n'ai pas encore de compte</h2>
+            <span>Je m'inscris avec un email</span>
             <form className='sign-up-form' onSubmit={handleSubmit}>
                 <FormInput 
                     type='text'
                     name='displayName'
                     value={state.displayName}
                     handleChange={handleChange}
-                    label='Name'
+                    label='Nom'
                     required
                     />
                 <FormInput 
@@ -66,7 +66,7 @@ const SignUp = () => {
                     value={state.password}
                     handleChange={handleChange}
                     autoComplete='new-password'
-                    label='Password'
+                    label='Mot de passe'
                     required
                     />
                 <FormInput 
@@ -75,10 +75,10 @@ const SignUp = () => {
                     autoComplete='new-password'
                     value={state.confirmPassword}
                     handleChange={handleChange}
-                    label='Confirm Password'
+                    label='Confirmer le mot de passe'
                     required
                     />
-                <CustomButton type='submit'>Sign up</CustomButton>
+                <CustomButton type='submit'>S'inscrire</CustomButton>
             </form>
         </div>
     );

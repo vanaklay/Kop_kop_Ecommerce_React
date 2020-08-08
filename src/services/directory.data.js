@@ -1,10 +1,10 @@
 const sections = [
   {
-    title: 'bags',
+    title: 'sacs',
     imageUrl: 'https://i.ibb.co/SQt9HF7/section-bags.jpg',
     size: 'large',
     id: 1,
-    linkUrl: 'shop/jackets'
+    linkUrl: 'shop/bags'
   },
   {
     title: 'mugs',
@@ -14,14 +14,14 @@ const sections = [
     linkUrl: 'shop/mugs'
   },
   {
-    title: 'womens',
+    title: 'femmes',
     imageUrl: 'https://i.ibb.co/HpxV0gB/section-woman-002.jpg',
     size: 'large',
     id: 3,
     linkUrl: 'shop/womens'
   },
   {
-    title: 'mens',
+    title: 'hommes',
     imageUrl: 'https://i.ibb.co/Km6Mzzq/section-mens.jpg',
     size: 'large',
     id: 4,

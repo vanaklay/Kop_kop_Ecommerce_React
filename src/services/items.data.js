@@ -1,7 +1,7 @@
 const shopData = [
     {
         id: 1,
-        title: 'bags',
+        title: 'sacs',
         routeName: 'bags',
         items: [
             {
@@ -63,7 +63,7 @@ const shopData = [
     },
     {
         id: 3,
-        title: 'womens',
+        title: 'femmes',
         routeName: 'womens',
         items: [
             {
@@ -94,7 +94,7 @@ const shopData = [
     },
     {
         id: 4,
-        title: 'mens',
+        title: 'hommes',
         routeName: 'mens',
         items: [
             {

@@ -66,21 +66,21 @@ class SignIn extends React.Component {
     render() {
         return (
             <div className='sign-in'>
-                <h2 className='title'>I already have an account</h2>
-                <span>Sign in with your email and password</span>
+                <h2 className='title'>J'ai déjà un compte</h2>
+                <span>Se connecter avec mon email et mot de passe</span>
                 <form onSubmit={this.handleSubmit}>
                     <FormInput name='email' type='email' 
                         value={this.state.email} required 
                         handleChange={this.handleChange}
                         autoComplete='username'
-                        label='email'
+                        label='Email'
                         />
                     <FormInput name='password' type='password' autoComplete='current-password'
-                        value={this.state.password} label='password'
+                        value={this.state.password} label='Mot de passe'
                         handleChange={this.handleChange} required />
                     <div className='buttons'>
-                    <CustomButton type='submit'>Sign in</CustomButton>
-                    <CustomButton type='button' onClick={signInWithGoogle} isGoogleSignIn>Sign in with Google</CustomButton>
+                    <CustomButton type='submit'>Se connecter</CustomButton>
+                    <CustomButton type='button' onClick={signInWithGoogle} isGoogleSignIn>Se connecter avec Google</CustomButton>
                     </div>
                 </form>
             </div>
