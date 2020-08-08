@@ -1,15 +1,15 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import './ShopPage.styles.scss';
 
-import shopData from '../../services/items.data';
+import CollectionsOverview from '../../components/collections-overview/CollectionsOverview';
+import CategoryPage from '../category/CategoryPage';
 
-import PreviewCollection from '../../components/preview/PreviewCollection';
-
-const ShopPage = () => {
-
+const ShopPage = ({ match }) => {
     return (
         <div className='shop-page'>
-            { shopData.map(({ id, ...otherDataProps }) => ( <PreviewCollection key={id} {...otherDataProps} />)) }
+            <Route exact path={`${match.path}`} component={CollectionsOverview} />
+            <Route path={`${match.path}/:categoryId`} component={CategoryPage} />
         </div>
     );
 };
