@@ -4,7 +4,13 @@ import 'firebase/auth';
 
 const firebaseConfig = {
     // Key api
-    
+    apiKey: "AIzaSyDXt68mLav64nhQ1SiiLXr4S-Lnyu9cEFM",
+    authDomain: "kopkopshop-f69ec.firebaseapp.com",
+    databaseURL: "https://kopkopshop-f69ec.firebaseio.com",
+    projectId: "kopkopshop-f69ec",
+    storageBucket: "kopkopshop-f69ec.appspot.com",
+    messagingSenderId: "659613810898",
+    appId: "1:659613810898:web:b487b0dd09e01ea2e86d0b"
   };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
