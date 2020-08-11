@@ -1,6 +1,6 @@
 const INITIAL_STATE = {
-    data: [
-        {
+    data: {
+        bags: {
             id: 1,
             title: 'sacs',
             routeName: 'bags',
@@ -31,7 +31,7 @@ const INITIAL_STATE = {
                 },
             ]
         },
-        {
+        mugs: {
             id: 2,
             title: 'mugs',
             routeName: 'mugs',
@@ -62,7 +62,7 @@ const INITIAL_STATE = {
                 },
             ]
         },
-        {
+        womens: {
             id: 3,
             title: 'femmes',
             routeName: 'womens',
@@ -93,7 +93,7 @@ const INITIAL_STATE = {
                 },
             ]
         },
-        {
+        mens: {
             id: 4,
             title: 'hommes',
             routeName: 'mens',
@@ -124,7 +124,7 @@ const INITIAL_STATE = {
                 },
             ]
         }
-    ]
+    }
 };
 
 export default (state = INITIAL_STATE, action) => {

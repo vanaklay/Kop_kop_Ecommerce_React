@@ -3,12 +3,12 @@ import './PreviewCollection.styles.scss';
 
 import ItemCollection from '../item-collection/ItemCollection';
 
-const PreviewCollection = ({ title, items }) => {
+const PreviewCollection = ({ items: { title, items } }) => {
     return (
         <div className='collection-preview'>
-            <h2 className='title'>{ title.toUpperCase() }</h2>
+            <h2 className='title'>{title.toUpperCase()}</h2>
             <div className='preview'>
-            { items
+            {items
                 .filter((item, idx) => idx < 4)
                 .map((item) => (
                     <ItemCollection key={item.id} item={item} />
