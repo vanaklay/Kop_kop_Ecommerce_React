@@ -27,6 +27,7 @@
 - Redux
 - Firebase 
 - Stripe Api
+- Styled-components
 - [imgbb](https://imgbb.com/)
 
 ## Special thanks to
