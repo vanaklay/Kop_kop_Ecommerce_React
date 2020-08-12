@@ -19,7 +19,7 @@ const ItemCollection = ({ item, addItem }) => {
                 <span className='name'>{name.toUpperCase()}</span>
                 <span className='price'>{price} €</span>
             </div>
-            <CustomButton inverted onClick={() => addItem(item)}>Ajouter au panier</CustomButton>
+            <CustomButton inverted onClick={() => addItem(item)} className='custom-button'>Ajouter au panier</CustomButton>
         </div>
     );
 };

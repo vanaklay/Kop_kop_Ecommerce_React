@@ -13,11 +13,11 @@ import CheckoutPage from './pages/checkout/CheckoutPage';
 import { auth, createUserProfileDocument } from './services/firebase';
 
 import { setCurrentUser } from './redux/actions';
-import { selectCurrentUser } from './redux/selectors/user.selectors';
+import { selectCurrentUser } from './redux/selectors';
 
 
 function App(props) {
-  const { setCurrentUser, currentUser } = props;
+  const { setCurrentUser, currentUser, collectionsArray } = props;
   useEffect(() => {
     const unsubscribeFromAuth = auth.onAuthStateChanged( async userAuth => {
       if (userAuth) {
@@ -32,7 +32,7 @@ function App(props) {
     });
     // Clean up the subscription
     return () => { unsubscribeFromAuth() };
-  }, [setCurrentUser]);
+  }, [setCurrentUser, collectionsArray]);
 
   return (
     <div>
