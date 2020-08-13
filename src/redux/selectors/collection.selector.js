@@ -16,3 +16,11 @@ export const selectCategory = categoryUrlParam => createSelector(
     [selectCollections],
     collections => (collections ? collections[categoryUrlParam] : null )
 );
+export const selectIsCollectionFetching = createSelector(
+    [selectCollection],
+    collection => collection.isFetching
+);
+export const selectIsCollectionsLoaded = createSelector(
+    [selectCollection],
+    collection => !!collection.data
+);

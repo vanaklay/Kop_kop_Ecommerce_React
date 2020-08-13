@@ -7,7 +7,6 @@ import CustomButton from '../custom-button/CustomButton';
 import './ItemCollection.styles.scss';
 
 const ItemCollection = ({ item, addItem, currentUser, history }) => {
-    console.log(history);
     const { name, price, imageUrl } = item;
     return (
         <div className='collection-item'>
