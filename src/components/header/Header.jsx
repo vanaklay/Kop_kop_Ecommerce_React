@@ -24,7 +24,8 @@ const Header = ({ currentUser, hidden }) => {
                     <OptionDiv onClick={() => auth.signOut()}>DECONNEXION</OptionDiv>
                     : <OptionLink to='/signin'>LOGIN</OptionLink>
                 }
-                <CartIcon />
+                { currentUser ? <CartIcon /> : null }
+                
             </OptionsContainer>
             { !hidden && <CartDropdown /> }
             

@@ -14,5 +14,5 @@ export const selectCollectionsArray = createSelector(
 
 export const selectCategory = categoryUrlParam => createSelector(
     [selectCollections],
-    collections => (collections ? collections[categoryUrlParam] : null)
+    collections => (collections ? collections[categoryUrlParam] : null )
 );

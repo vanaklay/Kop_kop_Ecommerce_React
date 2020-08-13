@@ -5,13 +5,13 @@ import { selectCategory } from '../../redux/selectors';
 import ItemCollection from '../../components/item-collection/ItemCollection';
 import './CategoryPage.styles.scss';
 
-const CategoryPage = ({ collection }) => {
-    const { title, items } = collection;
+const CategoryPage = (props) => {
+    const { title, items } = props.collection;
     return (
         <div className='category-page'>
             <h2 className='title'>{title.toUpperCase()}</h2>
             <div className='items'>
-                { items.map( item => (<ItemCollection key={item.id} item={item} />)) }
+                {items.map( item => (<ItemCollection key={item.id} item={item} />))}
             </div>
         </div>
     );

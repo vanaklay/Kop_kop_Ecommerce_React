@@ -4,7 +4,8 @@ import './PreviewCollection.styles.scss';
 
 import ItemCollection from '../item-collection/ItemCollection';
 
-const PreviewCollection = ({ items: { title, items }, history, match, routeName }) => {
+const PreviewCollection = ({ items: { title, items, routeName }, history, match }) => {
+    
     return (
         <div className='collection-preview'>
             <h2 className='title' onClick={() => history.push(`${match.path}/${routeName}`)} >{title.toUpperCase()}</h2>

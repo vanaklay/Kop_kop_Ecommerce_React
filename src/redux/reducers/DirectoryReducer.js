@@ -5,7 +5,7 @@ const INITIAL_STATE = {
           imageUrl: 'https://i.ibb.co/SQt9HF7/section-bags.jpg',
           size: 'large',
           id: 1,
-          linkUrl: 'shop/bags'
+          linkUrl: 'shop/sacs'
         },
         {
           title: 'mugs',
@@ -19,14 +19,14 @@ const INITIAL_STATE = {
           imageUrl: 'https://i.ibb.co/HpxV0gB/section-woman-002.jpg',
           size: 'large',
           id: 3,
-          linkUrl: 'shop/womens'
+          linkUrl: 'shop/femmes'
         },
         {
           title: 'hommes',
           imageUrl: 'https://i.ibb.co/Km6Mzzq/section-mens.jpg',
           size: 'large',
           id: 4,
-          linkUrl: 'shop/mens'
+          linkUrl: 'shop/hommes'
         }
       ]
 };
