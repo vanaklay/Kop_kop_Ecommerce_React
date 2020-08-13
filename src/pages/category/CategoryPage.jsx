@@ -11,7 +11,7 @@ const CategoryPage = (props) => {
         <div className='category-page'>
             <h2 className='title'>{title.toUpperCase()}</h2>
             <div className='items'>
-                {items.map( item => (<ItemCollection key={item.id} item={item} />))}
+                {items.map( item => (<ItemCollection key={item.id} item={item} history={props.history} />))}
             </div>
         </div>
     );
