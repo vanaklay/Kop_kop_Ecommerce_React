@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Route } from 'react-router-dom';
-import './ShopPage.styles.scss';
 
 import CollectionsOverviewContainer from '../../components/collections-overview/CollectionsOverview.container';
 import CollectionPageContainer from '../category/CollectionPage.container';
 
 import { fetchCollectionsStartAsync } from '../../redux/actions';
+
+import { ShopPageContainer } from './ShopPage.styles';
 
 
 const ShopPage = ({ match, fetchCollectionsStartAsync }) => {
@@ -14,10 +15,10 @@ const ShopPage = ({ match, fetchCollectionsStartAsync }) => {
         fetchCollectionsStartAsync()
     }, [fetchCollectionsStartAsync]);
     return (
-        <div className='shop-page'>
+        <ShopPageContainer>
             <Route exact path={`${match.path}`} component={CollectionsOverviewContainer} />
             <Route path={`${match.path}/:categoryId`} component={CollectionPageContainer} />
-        </div>
+        </ShopPageContainer>
     );
 };
 

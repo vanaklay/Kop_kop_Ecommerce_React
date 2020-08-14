@@ -3,17 +3,18 @@ import { connect } from 'react-redux';
 
 import { selectCategory } from '../../redux/selectors';
 import ItemCollection from '../../components/item-collection/ItemCollection';
-import './CategoryPage.styles.scss';
+
+import { CollectionContainer, CollectionTitle, CollectionItems } from './CategoryPage.styles';
 
 const CategoryPage = (props) => {
     const { title, items } = props.collection;
     return (
-        <div className='category-page'>
-            <h2 className='title'>{title.toUpperCase()}</h2>
-            <div className='items'>
+        <CollectionContainer>
+            <CollectionTitle>{title.toUpperCase()}</CollectionTitle>
+            <CollectionItems>
                 {items.map( item => (<ItemCollection key={item.id} item={item} history={props.history} />))}
-            </div>
-        </div>
+            </CollectionItems>
+        </CollectionContainer>
     );
 };
 
